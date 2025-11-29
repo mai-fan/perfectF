@@ -5,10 +5,10 @@
     "description": "Marin Kitagawa, des pieds usés qui doivent bien sentir.",
     "videos": [],
     "images": [
-      "../images/marin1.jpg",
-      "../images/marin2.jpg",
-      "../images/marin3.jpg",
-      "../images/marin.gif"
+      "images/marin1.jpg",
+      "images/marin2.jpg",
+      "images/marin3.jpg",
+      "images/marin.gif"
     ]
   },
   {
@@ -17,8 +17,8 @@
     "description": "Mai sakurajima, ses pieds en collants doivent puer une infection.",
     "videos": [],
     "images": [
-      "../images/mai1.png",
-      "../images/mai.gif"
+      "images/mai1.png",
+      "images/mai.gif"
     ]
   },
   {
@@ -28,7 +28,7 @@
     "videos": [
       {
         "source": "mp4",
-        "url": "../videos/kurocoss.mp4" 
+        "url": "videos/kurocoss.mp4" 
       }
     ],
     "images": []
