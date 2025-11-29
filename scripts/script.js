@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let toutesLesDonnees = [];
 
     // --- 1. Récupération des données ---
-    fetch('data/data.json')
+    fetch('https://github.com/mai-fan/perfectF/blob/main/data/data.json')
         .then(response => {
             if (!response.ok) throw new Error(`Erreur HTTP! Statut: ${response.status}`);
             return response.json();
