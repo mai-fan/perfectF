@@ -1,0 +1,36 @@
+[
+  {
+    "nom": "Marin Kitagawa",
+    "type": "anime",
+    "description": "Marin Kitagawa, des pieds usés qui doivent bien sentir.",
+    "videos": [],
+    "images": [
+      "../images/marin1.jpg",
+      "../images/marin2.jpg",
+      "../images/marin3.jpg",
+      "../images/marin.gif"
+    ]
+  },
+  {
+    "nom": "Mai Sakurajima",
+    "type": "anime",
+    "description": "Mai sakurajima, ses pieds en collants doivent puer une infection.",
+    "videos": [],
+    "images": [
+      "../images/mai1.png",
+      "../images/mai.gif"
+    ]
+  },
+  {
+    "nom": "Kurocoss1",
+    "type": "reel",
+    "description": "un gros orteil qui doit etre bon à sucer.",
+    "videos": [
+      {
+        "source": "mp4",
+        "url": "../videos/kurocoss.mp4" 
+      }
+    ],
+    "images": []
+  }
+]

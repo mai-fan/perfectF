@@ -1,0 +1,168 @@
+/* --- Configuration Globale (Dark Mode) --- */
+:root {
+    --bg-color: #121212;       /* Fond très sombre */
+    --card-bg: #1e1e1e;        /* Fond des cartes */
+    --text-main: #e0e0e0;      /* Texte principal */
+    --text-muted: #a0a0a0;     /* Texte secondaire */
+    --accent: #bb86fc;         /* Couleur d'accentuation (violet soft) */
+    --gap: 20px;               /* Espacement standard */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* --- Titre Principal --- */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+/* --- Conteneur Principal --- */
+#contenu-dynamique {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espace entre chaque projet/personne */
+}
+
+/* --- La Carte (Conteneur d'un élément) --- */
+.item-carte {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombre portée */
+    transition: transform 0.2s ease;
+}
+
+.item-carte:hover {
+    transform: translateY(-2px); /* Petit effet au survol */
+}
+
+/* --- Typographie interne --- */
+.item-carte h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.item-carte p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+/* --- Galerie des Médias (Images & Vidéos) --- */
+.media-galerie {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne */
+    gap: 20px;
+    justify-content: center; /* Centre les médias */
+    align-items: center; /* Centre verticalement si hauteurs différentes */
+}
+
+/* --- Style des Images --- */
+.media-image {
+    /* Responsive de base */
+    max-width: 100%; /* Important pour le mobile : ne dépasse jamais l'écran */
+    width: auto;     /* Important pour garder les proportions */
+    
+    /* --- NOUVELLES LIMITES DE TAILLE --- */
+    /* On réduit la hauteur max (c'était 500px avant) */
+    max-height: 300px; 
+    /* On ajoute une largeur max pour qu'elles ne soient pas trop larges sur PC */
+    max-width: 400px;  
+    
+    /* Style visuel */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    
+    /* 'contain' assure que l'image entière est visible dans le cadre défini ci-dessus,
+       quelle que soit sa forme (carrée, panoramique, etc.), sans être déformée. */
+    object-fit: contain; 
+    
+    background-color: #1a1a1a; /* Un fond légèrement plus clair que la carte pour faire ressortir l'image */
+    
+    /* Permet de centrer l'image verticalement si elle est à côté d'une vidéo plus grande */
+    align-self: center; 
+}
+
+/* --- Style des Filtres --- */
+.conteneur-filtres {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-filtre {
+    background-color: var(--card-bg); /* Fond gris foncé */
+    color: var(--text-main);
+    border: 1px solid #333;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 25px; /* Forme arrondie */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-filtre:hover {
+    background-color: #333;
+}
+
+/* Quand le bouton est coché (actif) */
+.btn-filtre.actif {
+    background-color: var(--accent); /* Votre violet (défini au début du CSS) */
+    color: #fff; /* Texte blanc */
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.4); /* Petite lueur violette */
+}
+
+.media-video {
+    width: 100%;
+    max-width: 220px; /* Taille fine pour format téléphone */
+    aspect-ratio: 9 / 16; 
+    border-radius: 12px;
+    background-color: #000;
+    align-self: center; 
+    object-fit: cover; /* Assure que la vidéo remplit bien le cadre */
+}
+
+/* --- Responsive : Adaptation Mobile --- */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .item-carte {
+        padding: 20px;
+    }
+
+    .media-galerie {
+        flex-direction: column; /* Empile les médias sur mobile */
+    }
+
+    .media-video {
+        max-width: 100%; /* Prend toute la largeur sur petit écran */
+        /* On garde le ratio 9/16, ou on peut le réduire un peu si c'est trop haut */
+    }
+}
