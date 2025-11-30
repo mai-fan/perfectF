@@ -32,5 +32,37 @@
       }
     ],
     "images": []
-  }
+  },
+  {
+    "nom": "Whitejio",
+    "type": "reel",
+    "description": "Des pieds juste comme on les aimes",
+    "videos": [
+      {
+        "source": "mp4",
+        "url": "videos/whitejio1.mp4" 
+      },
+      {
+        "source": "mp4",
+        "url": "videos/whitejio2.mp4" 
+      },
+    ],
+    "images": []
+  },
+  {
+    "nom": "Aiko Akira",
+    "type": "reel",
+    "description": "Des pieds 'moches' mais qui les rendent plus que parfaits a nos yeux",
+    "videos": [
+      {
+        "source": "mp4",
+        "url": "videos/aiko1.mp4" 
+      },
+      {
+        "source": "mp4",
+        "url": "videos/aiko2.mp4" 
+      },
+    ],
+    "images": []
+  },
 ]
