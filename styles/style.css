@@ -129,6 +129,73 @@ h1 {
     background-color: #333;
 }
 
+/* --- Style de la Fenêtre Modale (Pop-up) --- */
+.modal {
+    position: fixed; /* Reste fixe même si on scrolle */
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fond noir transparent */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    z-index: 1000; /* Passe au dessus de tout */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Classe utilitaire pour cacher le modal */
+.modal.cache {
+    display: none;
+    opacity: 0;
+}
+
+.modal-contenu {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px rgba(187, 134, 252, 0.2);
+    max-width: 90%;
+    width: 400px;
+}
+
+.modal-contenu h3 {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.modal-boutons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-choix {
+    background-color: #333;
+    color: white;
+    border: 1px solid var(--accent);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+
+.btn-choix:hover {
+    background-color: var(--accent);
+    color: #000;
+    font-weight: bold;
+}
+
+#btn-fermer-modal {
+    background: transparent;
+    border: none;
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
+}
 /* Quand le bouton est coché (actif) */
 .btn-filtre.actif {
     background-color: var(--accent); /* Votre violet (défini au début du CSS) */
