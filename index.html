@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Perfect F</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" type="image/gif" href="images/marin.gif">
 </head>
 <body>
 
@@ -13,9 +12,25 @@
         <button class="btn-filtre actif" data-filter="tout">Tout</button>
         <button class="btn-filtre" data-filter="reel">Reel</button>
         <button class="btn-filtre" data-filter="anime">Anime</button>
+        
+        <button id="btn-hasard" class="btn-filtre" style="border-color: #ffd700; color: #ffd700;">Sur quoi je vais finir ?</button>
     </div>
+
     <div id="contenu-dynamique">
         </div>
+
+    <div id="modal-choix" class="modal cache">
+        <div class="modal-contenu">
+            <h3>Que veux-tu voir ?</h3>
+            <div class="modal-boutons">
+                <button class="btn-choix" data-choix="reel">Reel</button>
+                <button class="btn-choix" data-choix="anime">Anime</button>
+                <button class="btn-choix" data-choix="tout">Peu importe</button>
+            </div>
+            <button id="btn-fermer-modal">Annuler</button>
+        </div>
+    </div>
+
     <script src="scripts/script.js"></script>
 </body>
 </html>
